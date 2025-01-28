@@ -28,8 +28,7 @@ const App = () => {
   // Add or edit user
   const handleSaveUser = (user) => {
     if (editingUser) {
-      // Edit existing user
-      fetch(`${API_URL}/${user.id}`, {
+        fetch(`${API_URL}/${user.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -43,7 +42,6 @@ const App = () => {
           setShowForm(false);
         });
     } else {
-      // Add new user
       fetch(API_URL, {
         method: 'POST',
         headers: {
